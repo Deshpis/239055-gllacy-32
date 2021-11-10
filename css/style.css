@@ -1,0 +1,611 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-900.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;  
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  font-style: normal;
+  color: #2D3440;
+  background-color: #FEAFC3;
+}
+
+.body-inner {
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 1170px;
+  min-height: 100%;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+/* Стили для .main-header */
+
+.main-header {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main-nav {
+  width: 585px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: block;
+  width: 137px;
+  height: 56px;
+  align-self: flex-start;
+}
+
+.logo-link[href] svg:hover {
+  opacity: 0.6;
+}
+
+.logo-link[href] svg:active {
+  opacity: 0.3;
+}
+
+.main-nav-list {
+  margin: 0;
+  margin-left: 17px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.main-nav-link {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 8px 16px;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #2D3440;
+  border-radius: 26px;
+}
+
+.main-nav-link-current {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+}
+
+.main-nav-link[href]:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.main-nav-link[href]:focus {
+  outline: 2px solid #2D3440;
+  outline-offset: -2px;
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.main-nav-link[href]:active {
+  outline: none;
+  background-color: #FCFCFC;
+  opacity: 1;
+}
+
+.catalog-item-wrapper {
+  position: relative;
+}
+
+.catalog-item-wrapper:hover .main-nav-link {
+  color: #2D3440;
+  background-color: #FCFCFC;
+}
+
+.catalog-item-wrapper:hover .catalog-tastes {
+  display: block;
+}
+
+.catalog-tastes {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 16px;
+  min-width: 138px;
+  max-width: 250px;
+  background-color: #FCFCFC;
+  border-radius: 4px;
+  list-style: none;
+  word-wrap: break-word;
+  display: none;
+}
+
+.catalog-new-items {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.catalog-new-items::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 1px;
+  bottom: -6px;
+  left: 16px;
+  right: 16px;
+  background-color: #B9B9B9;
+}
+
+.catalog-new-items a {
+  font-weight: bold;
+}
+
+.catalog-tastes-link {
+  display: block;
+  padding: 6px 16px;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.catalog-tastes-link-current {
+  color: #FCFCFC;
+  background-color: #FF4A78;
+}
+
+.catalog-tastes-link:hover {
+  background-color: #FFCBD8;
+}
+
+.catalog-tastes-link:active {
+  background-color: #FF7799;
+}
+
+.user-nav {
+  margin-left: auto;
+  width: 500px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-phone {
+  display: block;
+  margin: 18px 5px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #2D3440;
+  text-decoration: none;
+  border-radius: 26px;
+}
+
+/* Поведение для номера не прописано в стайлгайде, так что это сделано на своё усмотрение */
+
+.contact-phone:hover {
+  opacity: 0.6;
+}
+
+.contact-phone:focus {
+  outline: 2px solid #2D3440;
+  outline-offset: 5px;
+}
+
+.contact-phone:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+/* Закончилось усмотрение выше */
+
+.link-btn-wrapper {
+  position: relative;
+}
+
+.link-btn {
+  position: relative;
+  margin: 10px 16px;
+  padding: 6px 16px;
+  padding-left: 40px;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.3);;
+  text-decoration: none;
+  border-radius: 26px;
+}
+
+.link-btn:last-of-type {
+  margin-right: 0;
+}
+
+.link-btn:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.link-btn:focus {
+  outline: 2px solid #2D3440;
+  outline-offset: -2px;
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.link-btn:active {
+  outline: none;
+  background-color: #FCFCFC;
+  opacity: 1;
+}
+
+.link-btn-icon {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 16px;
+  margin: auto;
+}
+
+.main-search {
+  box-sizing: border-box;
+  padding-left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.main-search .link-btn-icon {
+  right: 0;
+  left: 0;
+}
+
+/* Общие стили для поповер и инпутов */
+
+.popover {
+  position: absolute;
+  right: 0;
+  background: #FCFCFC;
+  border-radius: 4px;
+}
+
+.link-btn-wrapper:hover .popover-search,
+.link-btn-wrapper:hover .popover-sign-in,
+.link-btn-wrapper:hover .popover-basket-empty,
+.link-btn-wrapper:hover .popover-basket-full { /* Почему это работает как надо? */
+  display: block;
+}
+
+.popover-search {
+  box-sizing: border-box;
+  padding: 24px 16px;
+  width: 356px;
+  display: none;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.popover-input {
+  box-sizing: border-box;
+  padding: 14px 16px;
+  padding-right: 42px;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  background: #FFFFFF;
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
+}
+
+.popover-clear {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  background-image: url("../image/svg/input-clear.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  opacity: 0.4;
+  cursor: pointer;
+  display: none;
+}
+
+.popover-clear:hover {
+  opacity: 1;
+}
+
+.popover-input:not(:placeholder-shown) + .popover-clear {
+  display: block;
+}
+
+/* Закончились общие стили для поповер и инпутов */
+
+.popover-sign-in {
+  box-sizing: border-box;
+  padding: 48px;
+  padding-bottom: 52px; 
+  width: 420px;
+  display: none;
+}
+
+.popover-sign-in h2 {
+  margin: 0;
+  margin-bottom: 32px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.popover-sign-in .input-wrapper {
+  margin-bottom: 16px;
+}
+
+.popover-sign-in-inner {
+  padding-top: 16px;
+  display: flex;
+}
+
+.popover-sign-in-inner a {
+  padding-bottom: 1px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D3440;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+
+.popover-sign-in-inner a:hover,
+.popover-sign-in-inner a:focus {
+  border: none;
+}
+
+.popover-sign-in-inner a:active {
+  outline: none;
+  opacity: 0.6;
+}
+
+.sign-in-submit {
+  width: 113px;
+  margin-right: 23px;
+}
+
+/* Стили для "дополнительной" кнопки */
+
+.additional-btn {
+  padding: 12px 32px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FCFCFC;
+  background-color: #FF2F64;
+  outline: 4px solid rgba(255, 47, 100, 0.3);
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+}
+
+.additional-btn:hover {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.3);
+  outline: 4px solid #FF2F64;
+}
+
+.additional-btn:focus {
+  outline: 2px solid #2D3440;
+}
+
+.additional-btn:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+.additional-btn:disabled {
+  color: #565C66;
+  background-color: #B9B9B9;
+  outline: 4px solid rgba(185, 185, 185, 0.3);
+}
+
+/* Закончились стили для "дополнительной" кнопки */
+
+.popover-basket-empty {
+  box-sizing: border-box;
+  padding: 48px;
+  width: 288px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  display: none;
+}
+
+.popover-basket-full {
+  box-sizing: border-box;
+  padding: 48px;
+  width: 441px;
+  display: none;
+}
+
+.popover-basket-full h2 {
+  margin: 0;
+  margin-bottom: 32px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.basket-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.basket-item {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
+}
+
+.basket-item:last-of-type {
+  margin-bottom: 32px;
+}
+
+.basket-item-link {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.basket-item-link:hover {
+  opacity: 0.6;
+}
+
+.basket-item-link:focus {
+  outline-offset: 5px;
+}
+
+.basket-item-link:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+.bakset-item-img {
+  margin: 0;
+  display: block;
+  width: 46px;
+  height: 46px;
+  overflow: hidden;
+}
+
+.basket-item-description {
+  margin-left: 16px;
+  width: 147px;
+}
+
+.basket-item-description h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.basket-item-description p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #B9B9B9;
+}
+
+.basket-item-cost {
+  margin-left: 16px;
+  width: 71px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.basket-item-del {
+  margin-left: auto;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  background-image: url("../image/svg/basket-del.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.basket-item-del:hover {
+  opacity: 0.6;
+}
+
+.basket-item-del:focus {
+  outline-offset: 5px;
+}
+
+.basket-item-del:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+.basket-order-wrapper {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.basket-order-btn {
+  max-width: 198px;
+}
+
+.total {
+  margin: 0;
+  margin-left: auto;
+  max-width: 115px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: right;
+  word-wrap: break-word;
+}
+
+.total-amount {
+  white-space: nowrap;
+}

@@ -428,6 +428,7 @@ body {
 
 .button {
   padding: 12px 32px;
+  display: block;
   font-family: "Inter", sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -895,3 +896,366 @@ body {
   outline-color: #2D3440;
   background-color: #2D3440;
 }
+
+/* Стили для .promotions */
+
+.promotions {
+  padding-top: 80px;
+}
+
+.promotions-header {
+  margin: 0 auto;
+  margin-bottom: 56px;
+  max-width: 443px;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.promotions-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 570px 570px;
+  gap: 30px;
+}
+
+.promotion-item {
+  box-sizing: border-box;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 570px;
+  background-color: #FF7799;
+  border-radius: 16px;
+  word-wrap: break-word;
+  background-repeat: no-repeat;
+}
+
+.promotion-item-1 {
+  background-image: url("../image/decorative/promotion-raspberries.png");
+  background-position: bottom right 15px;
+}
+
+.promotion-item-2 {
+  background-image: url("../image/decorative/promotion-marshmallows.png");
+  background-position: bottom right 7px;
+}
+
+.promotion-item-2 .promotion-item-description {
+  width: 294px;
+}
+
+.promotion-item-header {
+  margin: 0;
+  margin-bottom: 16px;
+  width: 321px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.promotion-item-description {
+  margin: 0;
+  margin-bottom: 32px;
+  width: 321px;
+}
+
+.promotion-item .button {
+  margin-top: auto;
+}
+
+/* Стили для .popular */
+
+.popular {
+  margin-top: 80px;
+}
+
+.popular-header {
+  margin: 0 auto;
+  margin-bottom: 56px;
+  max-width: 527px;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  text-align: center;
+}
+
+.pupular-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  gap: 30px;
+}
+
+/* Стили для карточки товара */
+
+.catalog-item {
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 51px; 
+  padding-top: 51px;
+  padding-right: 40px;
+  padding-bottom: 24px;
+  padding-left: 40px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #FCFCFC;
+  border-radius: 8px;
+  word-wrap: break-word;
+}
+
+.catalog-item-image {
+  position: absolute;
+  top: -51px;
+  left: 50%;
+  margin: 0;
+  margin-left: -84px;
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  filter: drop-shadow(0px 4px 12px rgba(45, 52, 64, 0.1));
+  overflow: hidden;
+}
+
+.catalog-item-header {
+  margin-top: 82px;
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.catalog-item-description {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.catalog-order-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog-price {
+  min-width: 85px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.catalog-btn {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #FF2F64;
+  border: none;
+  cursor: pointer;
+}
+
+.catalog-btn svg {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 50%;
+  margin-left: -8px;
+  fill: #FCFCFC;
+}
+
+.catalog-btn:hover {
+  background-color: rgba(252, 252, 252, 0.3);
+  outline: 2px solid #FF2F64;
+  outline-offset: -2px;
+}
+
+.catalog-btn:hover svg {
+  fill: #2D3440;
+}
+
+.catalog-btn:focus {
+  outline: 2px solid #2D3440;
+  outline-offset: -2px;
+}
+
+.catalog-btn:active {
+  opacity: 0.6;
+}
+
+.catalog-btn:disabled {
+  background-color: #B9B9B9;
+  outline: none;
+  opacity: 1;
+}
+
+.catalog-btn:disabled svg {
+  fill: #565C66;
+}
+
+/* Закончились стили для карточки товара */
+
+.features {
+  margin-top: 80px;
+  padding: 24px;
+  background-image: url("../image/decorative/features-bg.png");
+  border-radius: 16px;
+}
+
+.features-inner {
+  padding: 56px 40px;
+  padding-top: 57px;
+  background-color: #FCFCFC;
+  border-radius: 16px;
+}
+
+.features-header {
+  margin: 0 auto;
+  margin-bottom: 55px;
+  max-width: 995px;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  text-align: center;
+}
+
+.features-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 31px;
+  row-gap: 40px;
+  list-style: none;
+}
+
+.features-item {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 64px;
+  width: 506px;
+  color: #565C66;
+}
+
+.features-item::before {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.features-item-ice-cream::before {
+  background-image: url("../image/decorative/features-ice-cream.png");
+}
+
+.features-item-cow::before {
+  background-image: url("../image/decorative/features-cow.png");
+}
+
+.features-item-leaf::before {
+  background-image: url("../image/decorative/features-leaf.png");
+}
+
+.features-item-termometer::before {
+  left: -1px;
+  background-image: url("../image/decorative/features-termometer.png");
+}
+
+.features-item p {
+  margin: 0;
+}
+
+/* Стили для .blog */
+
+.content-wrapper {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.blog {
+  box-sizing: border-box;
+  padding: 32px;
+  width: 570px;
+  min-height: 220px;
+  background-color: #FFFFFF;
+  background-image: url("../image/decorative/blog-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 16px;
+}
+
+.blog span {
+  color: #565C66;
+  line-height: 20px;
+}
+
+.news-header {
+  margin: 0;
+  margin-top: 12px;
+  max-width: 303px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  word-wrap: break-word;
+}
+
+.news-header a {
+  color: #2D3440;
+  text-decoration: none;
+}
+
+/* Стили для .subscribe */
+
+.subscribe {
+  box-sizing: border-box;
+  padding: 6px;
+  width: 570px;
+  border-radius: 16px;
+  background-image: url("../image/decorative/subscribe-bg.png");
+}
+
+.subscribe-inner {
+  box-sizing: border-box;
+  padding: 26px;
+  padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #565C66;
+  background-color: #FCFCFC;
+  border-radius: 16px;
+}
+
+.subscribe-appeal {
+  margin: 0;
+}
+
+.subscribe-form {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subscribe-input {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin-right: 24px;
+}
+
+.subscribe-input::placeholder {
+  color: #B9B9B9;
+}
+

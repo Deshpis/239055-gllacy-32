@@ -697,6 +697,23 @@ body {
   display: flex;
 }
 
+/* Классы ниже должны задаваться непосредственно тегу body,
+  при выборе того или иного слайда */
+
+.bg-slides-item-1 {
+  background-color: #FEAFC3;
+}
+
+.bg-slides-item-2 {
+  background-color: #69A9FF;
+}
+
+.bg-slides-item-3 {
+  background-color: #FCC850;
+}
+
+/* Закончились отдельные классы слайдов */
+
 .slide-left-column {
   box-sizing: border-box;
   padding-top: 136px;
@@ -1496,6 +1513,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(45, 52, 64, 0.3);
+  z-index: 2;
 }
 
 .modal-container-show {
@@ -1556,6 +1574,7 @@ body {
 
 .textarea-input {
   height: 149px;
+  resize: none;
 }
 
 .feedback-form-btn {
@@ -1886,6 +1905,11 @@ body {
 
 .control:hover .control-mark {
   border-color: #FCFCFC;
+}
+
+.control-input:focus + .control-mark {
+  outline: 1px solid #2D3440;
+  outline-offset: 2px;
 }
 
 .control-input:disabled + .control-mark {
